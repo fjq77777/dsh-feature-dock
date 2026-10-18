@@ -1,0 +1,9 @@
+# dsh-feature-dock bundle patch.
+#
+# The bundle contributes ONE Host row so the Loader has a row whose package
+# declares `dsh.client`; the browser half owns the dock, the toggles and the
+# settings popover. Nothing runs in the Host beyond activation.
+
+- insert:
+    - id: feature-dock
+      name: 'dsh-feature-dock'
