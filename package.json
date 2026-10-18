@@ -1,0 +1,49 @@
+{
+  "name": "dsh-feature-dock",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "macOS-Dock-style bottom feature dock for the DSH Web GUI: spring hover magnification, a glass pill that grows around the icons, one-click wallpaper/orb/theme toggles, and an extensible feature registry.",
+  "license": "MIT",
+  "author": "fjq77777",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dock",
+    "navigation",
+    "magnification",
+    "macos",
+    "ui"
+  ],
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "preview/*.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}
